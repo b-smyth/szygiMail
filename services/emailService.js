@@ -10,6 +10,7 @@ module.exports = function () {
     var idam_orgadmin_rereg='User re-registered on Common Platform';
     var idam_org_dereg='Organisation deregistered on Common Platform';
     var idam_org_updated='Organisation details have changed on Common Platform';
+    var idam_org_accountableperson_updated='Accountable person details have changed on Common Platform';
     var idam_org_informlist_updated='Email notification list updated on Common Platform';
     var idam_org_rereg='Organisation re-registered on Common Platform';
     var idam_cppadmin_created='New user added on Common Platform';
@@ -95,6 +96,10 @@ module.exports = function () {
         return getIdamLatestEmail(userEmail, 'Re-registration of your Common Platform Account');
     };
 
+    this.getAccountablePersonUpdatedMail = function (userEmail) {
+        return getIdamLatestEmail(userEmail, idam_org_accountableperson_updated);
+    };
+
     this.getInformListUpdatedMail = function (userEmail) {
         return getIdamLatestEmail(userEmail, idam_org_informlist_updated);
     };
@@ -116,6 +121,7 @@ module.exports = function () {
             this.getResetPasswordMail(userEmail),
             this.getReregisterMail(userEmail),
             this.getUserRegistrationMail(userEmail),
+            this.getAccountablePersonUpdatedMail(userEmail),
             this.getInformListUpdatedMail(userEmail),
             getIdamLatestEmail(userEmail, idam_org_dereg),
             getIdamLatestEmail(userEmail, idam_org_updated),
