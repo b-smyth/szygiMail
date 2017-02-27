@@ -125,7 +125,6 @@ module.exports = function () {
             this.getInformListUpdatedMail(userEmail),
             getIdamLatestEmail(userEmail, idam_org_dereg),
             getIdamLatestEmail(userEmail, idam_org_updated),
-            getIdamLatestEmail(userEmail, idam_org_informlist_updated),
             getIdamLatestEmail(userEmail, idam_org_rereg),
             getIdamLatestEmail(userEmail, idam_user_created),
             getIdamLatestEmail(userEmail, idam_user_dereg),
